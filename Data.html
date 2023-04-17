@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.app{
+			background-image: url(https://yobte.ru/uploads/posts/2019-11/sakura-66-foto-63.jpg);
+			background-size: cover;
+		}
+		.apple{
+			width: 550px;
+			height: 280px;
+			margin-top:220px;
+			margin-left: 430px;
+			background-color: purple;
+			border-radius: 25px;
+			background-color: rgba(128, 0, 128, 0.7);
+		}
+		.opti{
+			margin-top: 50px;
+			margin-left: 150px;
+			width: 120px;
+			height: 30px;
+			border-radius: 15px;
+		}
+		.pear{
+			margin-top: 50px;
+			margin-left: 10px;
+			width: 120px;
+			height: 30px;ы
+			border-radius: 15px;
+		}
+	</style>
+</head>
+<body class="app">
+	<div class="apple">
+	<h1 style="text-align: center;color:pink ;">Дата Рождения</h1>
+		<select id="option" class="opti">
+			<option value="31">Январь</option>
+			<option value="28">Февраль</option>
+			<option value="31">Март</option>
+			<option value="30">Апрель</option>
+			<option value="31">Май</option>
+			<option value="30">Июнь</option>
+			<option value="31">Июль</option>
+			<option value="31">Август</option>
+			<option value="30">Сентябрь</option>
+			<option value="31">Октябрь</option>
+			<option value="30">Ноябрь</option>
+			<option value="31">Декабрь</option>
+		</select>
+		<select class="pear" id="alin">
+			<option>1</option>
+		</select>
+	</div>
+	<script type="text/javascript">
+		const  option = document.getElementById('option')
+		const  alin = document.getElementById('alin')
+		option.onchange = () => {
+			for(i = 1;i <= option.value; i++){
+				alin.innerHTML+=`<option>${i}</option>`
+			}
+		}
+	</script>
+</body>
+</html>
